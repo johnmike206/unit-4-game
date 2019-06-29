@@ -12,7 +12,10 @@ $(document).ready(function(){
     randomNumber =Math.floor(Math.random() * (100 - 1) + 1)
     console.log(randomNumber)
     $("#targetScore").html(randomNumber)
-    return randomNumber;
+    yourScore = 0
+    $("#yourScore").html(yourScore)
+
+    return ;
   }
 
 // create a function to display total value of colored buttoms clicked
@@ -57,8 +60,13 @@ $(document).ready(function(){
   function youLost(){
     if(yourScore > randomNumber){
       alert("you lost~")
+      PCPickRandomNumber();
+    }else  if(yourScore === randomNumber){
+      alert("you win FUCKER!")
+      PCPickRandomNumber();
     }
   }
-  
+
+    
 
 });
